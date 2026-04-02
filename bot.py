@@ -11,9 +11,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = update.message.text.lower()
 
-    if "привет" in text:
+    if text == "привет":
         await update.message.reply_text("Привет!")
-    if "пока" in text:
+    elif text == "пока":
         await update.message.reply_text("Пока!")
 
 app = ApplicationBuilder().token(TOKEN).build() #fdfsfdfsf
